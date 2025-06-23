@@ -1,0 +1,196 @@
+/* reset */
+button,
+fieldset,
+input {
+  all: unset;
+}
+
+.btn-add-book {
+  background: var(--accent-blue-dark);
+  width: max-content;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.btn-add-book:hover {
+  transform: scale(103%);
+  opacity: 0.9;
+}
+
+.DialogOverlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  background-color: var(--bg-dark-hover);
+  border-radius: 8px;
+  box-shadow: 0px 10px 30px var(--shadow-dark);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 500px;
+  max-height: 85vh;
+  padding: 25px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent:focus {
+  outline: none;
+}
+
+.DialogTitle {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.DialogDescription {
+  margin: 10px 0 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  height: 35px;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.Button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+.Button:focus-visible {
+  outline: 2px solid var(--accent-blue-dark);
+  outline-offset: 1px;
+}
+
+.Button.violet {
+  background-color: transparent;
+  color: white;
+}
+
+.Button.violet:hover {
+  background-color: var(--border-light);
+}
+
+.Button.green {
+  background-color: var(--success);
+  color: white;
+}
+
+.Button.green:hover {
+  background-color: #3e8e41;
+}
+
+.IconButton {
+  all: unset;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--border-light);
+  transition: background 0.2s ease;
+}
+
+.IconButton:hover {
+  background-color: var(--accent-blue-dark);
+}
+
+.IconButton:focus {
+  box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+.Fieldset {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.Label {
+  font-size: 15px;
+  color: var(--text-primary);
+  width: 90px;
+  text-align: right;
+}
+
+.Input {
+  width: 100%;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 15px;
+  line-height: 1;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  border: 1px solid var(--border-lighter);
+  height: 35px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px var(--accent-blue-dark);
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (max-width: 800px){
+  .btn-add-book{
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

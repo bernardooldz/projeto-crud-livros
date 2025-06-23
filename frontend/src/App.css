@@ -1,0 +1,137 @@
+header {
+  width: 100%;
+  background: var(--border-light);
+  height: 4rem;
+  padding: 0.7rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: -5px 2px 30px var(--shadow-dark);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--accent-blue-dark);
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-book-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-book-list ul {
+  list-style: none;
+}
+
+.container-book-list h2 {
+  font-size: 2rem;
+  text-decoration: underline 4px var(--accent-blue-dark);
+  padding: 10px;
+}
+
+.card-book {
+  background: var(--bg-light);
+  color: var(--text-inverse);
+  width: 550px;
+  height: max-content;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: -5px 5px 10px var(--shadow-dark);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.35s;
+}
+
+.card-book:hover {
+  transform: scale(101%);
+}
+
+.container-book-infos{
+  max-width: 80%;
+}
+
+.book-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.container-card-book-buttons {
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-card-book {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.btn-card-book:hover {
+  transform: scale(105%);
+  opacity: 0.9;
+}
+
+.btn-card-book:last-child {
+  background-color: var(--error);
+}
+
+.ToastRoot {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0 10px 20px -15px rgba(22, 23, 24, 0.2);
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.good {
+  border-top: 7px solid var(--success);
+}
+
+.bad {  
+  border-top: 7px solid var(--error);
+}
+
+.ToastTitle {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--text-inverse);
+}
+
+.ToastDescription{
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--border-lighter);
+}
+
+.ToastViewport {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+@media (max-width: 800px){
+  .card-book{
+    width: 90vw;
+  }
+
+  header{
+    justify-content: center;
+  }
+}
